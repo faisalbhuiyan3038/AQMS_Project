@@ -1,4 +1,4 @@
-"""AQMS URL Configuration
+"""AirQuality URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -19,6 +19,6 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', include('login.urls')),
-    path('', RedirectView.as_view(url='login/'))
+    path('dashboard/',include('dashboard.urls')),
+    path('', RedirectView.as_view(url='dashboard/'))
 ]

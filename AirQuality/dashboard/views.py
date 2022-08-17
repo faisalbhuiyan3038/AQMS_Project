@@ -3,5 +3,5 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def loginPage_view(request):
-    return HttpResponse('hello')
+def index(request):
+    return HttpResponse("hello")

@@ -8,7 +8,7 @@ from . import models
 # Create your views here.
 
 def index(request):
-    return HttpResponse("hello")
+    return render(request,'dashboard/dashboard.html')
 
 class StationAirQualityCreate(CreateView):
     model = models.StationAirQuality

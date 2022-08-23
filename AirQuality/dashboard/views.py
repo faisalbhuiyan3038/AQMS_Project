@@ -18,4 +18,13 @@ class StationAirQualityCreate(CreateView):
         form = super().get_form(form_class)
         form.fields["Date"].widget = forms.DateInput(format=('%d/%m/%Y'),attrs={'class':'form_control','placeholder':'Select a date','type':'date'})
         return form
+
+class RouteWiseDataCreate(CreateView):
+    model = models.RouteWiseData
+    fields = '__all__'
+
+    def get_form(self,form_class=None):
+        form = super().get_form(form_class)
+        form.fields["Date"].widget = forms.DateInput(format=('%d/%m/%Y'),attrs={'class':'form_control','placeholder':'Select a date','type':'date'})
+        return form
     
